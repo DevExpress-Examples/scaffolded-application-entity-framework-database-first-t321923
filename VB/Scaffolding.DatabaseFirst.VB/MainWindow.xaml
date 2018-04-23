@@ -1,0 +1,13 @@
+﻿<dxr:DXRibbonWindow x:Class="Scaffolding.DatabaseFirst.VB.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+	xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns:view="clr-namespace:Scaffolding.DatabaseFirst.VB.Scaffolding.DatabaseFirst.VB.Views"
+    UseLayoutRounding="True"
+	Title="Scaffolding Example" Height="600" Width="800">
+    <Grid>
+        <view:NorthwindEntitiesView/>
+    </Grid>
+</dxr:DXRibbonWindow>
