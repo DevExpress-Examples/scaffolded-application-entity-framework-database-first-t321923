@@ -1,0 +1,188 @@
+﻿<UserControl x:Class="Views.EmployeeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+        xmlns:dxrudex="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesignerextensions"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewModel="clr-namespace:Scaffolding.DatabaseFirst.VB.ViewModels"
+        xmlns:view="clr-namespace:Scaffolding.DatabaseFirst.VB.Views"
+        xmlns:localization="clr-namespace:Scaffolding.DatabaseFirst.VB.Localization"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="600" DataContext="{dxmvvm:ViewModelSource viewModel:EmployeeViewModel}">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../../Resources/EntityViewResources.xaml" />
+    </UserControl.Resources>
+    <DockPanel Style="{StaticResource EntityView.RootContainer}">
+        <dxr:RibbonControl DockPanel.Dock="Top" Style="{StaticResource EntityView.RibbonControl}">
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage Style="{StaticResource EntityView.RibbonPage}">
+                    <dxr:RibbonPageGroup Style="{StaticResource EntityView.RibbonPageGroup.Main}">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Save}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveAndClose}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveAndNew}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Reset}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Delete}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.Close}" />
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Style="{StaticResource EntityView.RibbonPageGroup.Layout}">
+                        <dxb:BarCheckItem Style="{StaticResource EntityView.Command.Customize}" IsChecked="{Binding IsCustomization, ElementName=layoutControl}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.SaveLayout}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Command.ResetLayout}" />
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+        <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom" Style="{StaticResource EntityView.RibbonStatusBar}" />
+        <dxlc:DataLayoutControl x:Name="layoutControl" Style="{StaticResource EntityView.DataLayoutControl}">
+            <dxlc:DataLayoutItem x:Name="layoutItemEmployeeID" Binding="{Binding EmployeeID, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="{Binding DataContext.IsPrimaryKeyReadOnly, RelativeSource={RelativeSource AncestorType={x:Type dxlc:DataLayoutControl}}}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemLastName" Binding="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemFirstName" Binding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemTitle" Binding="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemTitleOfCourtesy" Binding="{Binding TitleOfCourtesy, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemBirthDate" Binding="{Binding BirthDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemHireDate" Binding="{Binding HireDate, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemAddress" Binding="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemCity" Binding="{Binding City, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemRegion" Binding="{Binding Region, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemPostalCode" Binding="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemCountry" Binding="{Binding Country, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemHomePhone" Binding="{Binding HomePhone, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemExtension" Binding="{Binding Extension, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemPhoto" Binding="{Binding Photo, Mode=OneTime}">
+                <dxe:ImageEdit EditValue="{Binding Photo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaxHeight="200" />
+            </dxlc:DataLayoutItem>
+            <dxlc:DataLayoutItem x:Name="layoutItemNotes" Binding="{Binding Notes, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemPhotoPath" Binding="{Binding PhotoPath, UpdateSourceTrigger=PropertyChanged}" />
+            <dxlc:DataLayoutItem x:Name="layoutItemEmployee1" Binding="{Binding Employee1, Mode=OneTime}">
+                <dxg:LookUpEdit Style="{StaticResource EntityView.LookUpEdit}" DataContext="{Binding ElementName=layoutControl, Path=DataContext}" EditValue="{Binding Entity.ReportsTo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" ItemsSource="{Binding LookUpEmployees.Entities}" ValueMember="EmployeeID" DisplayMember="LastName">
+                    <dxg:LookUpEdit.PopupContentTemplate>
+                        <ControlTemplate TargetType="ContentControl">
+                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="False" ShowLoadingPanel="{Binding LookUpEmployees.IsLoading}" />
+                        </ControlTemplate>
+                    </dxg:LookUpEdit.PopupContentTemplate>
+                </dxg:LookUpEdit>
+            </dxlc:DataLayoutItem>
+            <dxlc:LayoutGroup x:Name="Tabs" View="Tabs" MinHeight="250">
+                <DockPanel Style="{StaticResource EntityView.DetailManyToMany.Container}" DataContext="{Binding TerritoriesDetailEntities}" dxlc:LayoutControl.TabHeader="Territory">
+                    <dxb:ToolBarControl DockPanel.Dock="Top">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.Command.New}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.Command.Edit}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.Command.Add}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.Command.Delete}" />
+                    </dxb:ToolBarControl>
+                    <dxg:GridControl x:Name="TerritoriesDetailEntitiesGrid" dx:DXSerializer.SerializationID="TerritoriesDetailEntitiesGrid" Style="{StaticResource EntityView.DetailManyToMany.GridControl}">
+                        <dxg:GridControl.View>
+                            <dxg:TableView Style="{StaticResource EntityView.DetailManyToMany.TableView}">
+                                <dxg:TableView.RowCellMenuCustomizations>
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.GridCommand.New}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.GridCommand.Edit}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.GridCommand.Add}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.DetailManyToMany.GridCommand.Delete}" />
+                                </dxg:TableView.RowCellMenuCustomizations>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                        <dxg:GridControl.TotalSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
+                        </dxg:GridControl.TotalSummary>
+                    </dxg:GridControl>
+                </DockPanel>
+                <DockPanel Style="{StaticResource EntityView.Detail.Container}" DataContext="{Binding EmployeeEmployees1Details}" dxlc:LayoutControl.TabHeader="Employees1">
+                    <dxb:ToolBarControl DockPanel.Dock="Top">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.New}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Edit}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Delete}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Refresh}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Save}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Reset}" />
+                    </dxb:ToolBarControl>
+                    <dxg:GridControl x:Name="EmployeeEmployees1DetailsGrid" dx:DXSerializer.SerializationID="EmployeeEmployees1DetailsGrid" Style="{StaticResource EntityView.Detail.GridControl.Editable}">
+                        <dxg:GridControl.View>
+                            <dxg:TableView Style="{StaticResource EntityView.Detail.TableView}">
+                                <dxg:TableView.RowCellMenuCustomizations>
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.New}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Edit}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Delete}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Refresh}" />
+                                </dxg:TableView.RowCellMenuCustomizations>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn IsSmart="True" FieldName="EmployeeID" />
+                            <dxg:GridColumn IsSmart="True" FieldName="LastName" />
+                            <dxg:GridColumn IsSmart="True" FieldName="FirstName" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Title" />
+                            <dxg:GridColumn IsSmart="True" FieldName="TitleOfCourtesy" />
+                            <dxg:GridColumn IsSmart="True" FieldName="BirthDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="HireDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Address" />
+                            <dxg:GridColumn IsSmart="True" FieldName="City" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Region" />
+                            <dxg:GridColumn IsSmart="True" FieldName="PostalCode" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Country" />
+                            <dxg:GridColumn IsSmart="True" FieldName="HomePhone" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Extension" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Notes" />
+                            <dxg:GridColumn IsSmart="True" FieldName="PhotoPath" />
+                            <dxg:GridColumn FieldName="Employee1.LastName" Header="{x:Static localization:NorthwindEntitiesResources.Employee_Employee1}" ReadOnly="True" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.TotalSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
+                        </dxg:GridControl.TotalSummary>
+                        <dxg:GridControl.GroupSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" />
+                        </dxg:GridControl.GroupSummary>
+                    </dxg:GridControl>
+                </DockPanel>
+                <DockPanel Style="{StaticResource EntityView.Detail.Container}" DataContext="{Binding EmployeeOrdersDetails}" dxlc:LayoutControl.TabHeader="Orders">
+                    <dxb:ToolBarControl DockPanel.Dock="Top">
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.New}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Edit}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Delete}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Refresh}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Save}" />
+                        <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.Command.Reset}" />
+                    </dxb:ToolBarControl>
+                    <dxg:GridControl x:Name="EmployeeOrdersDetailsGrid" dx:DXSerializer.SerializationID="EmployeeOrdersDetailsGrid" Style="{StaticResource EntityView.Detail.GridControl.Editable}">
+                        <dxg:GridControl.View>
+                            <dxg:TableView Style="{StaticResource EntityView.Detail.TableView}">
+                                <dxg:TableView.RowCellMenuCustomizations>
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.New}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Edit}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Delete}" />
+                                    <dxb:BarButtonItem Style="{StaticResource EntityView.Detail.GridCommand.Refresh}" />
+                                </dxg:TableView.RowCellMenuCustomizations>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn IsSmart="True" FieldName="OrderID" />
+                            <dxg:GridColumn IsSmart="True" FieldName="OrderDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="RequiredDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShippedDate" />
+                            <dxg:GridColumn IsSmart="True" FieldName="Freight" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipName" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipAddress" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipCity" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipRegion" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipPostalCode" />
+                            <dxg:GridColumn IsSmart="True" FieldName="ShipCountry" />
+                            <dxg:GridColumn FieldName="Employee1.LastName" Header="{x:Static localization:NorthwindEntitiesResources.Employee_Employee1}" ReadOnly="True" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.TotalSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" Alignment="Right" />
+                        </dxg:GridControl.TotalSummary>
+                        <dxg:GridControl.GroupSummary>
+                            <dxg:GridSummaryItem SummaryType="Count" />
+                        </dxg:GridControl.GroupSummary>
+                    </dxg:GridControl>
+                </DockPanel>
+            </dxlc:LayoutGroup>
+        </dxlc:DataLayoutControl>
+    </DockPanel>
+</UserControl>

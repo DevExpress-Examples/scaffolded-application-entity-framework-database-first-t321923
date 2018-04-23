@@ -1,0 +1,765 @@
+﻿<root>
+    <xsd:schema id="root"
+        xmlns=""
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+    <data name="CategoryPlural" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+    <data name="Category_CategoryID" xml:space="preserve">
+    <value>Category ID</value>
+  </data>
+    <data name="Category_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Category_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+    <data name="Category_Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+    <data name="CustomerDemographic" xml:space="preserve">
+    <value>Customer Demographic</value>
+  </data>
+    <data name="CustomerDemographicPlural" xml:space="preserve">
+    <value>Customer Demographics</value>
+  </data>
+    <data name="CustomerDemographic_CustomerTypeID" xml:space="preserve">
+    <value>Customer Type ID</value>
+  </data>
+    <data name="CustomerDemographic_CustomerDesc" xml:space="preserve">
+    <value>Customer Desc</value>
+  </data>
+    <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+    <data name="CustomerPlural" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+    <data name="Customer_CustomerID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+    <data name="Customer_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Customer_ContactName" xml:space="preserve">
+    <value>Contact Name</value>
+  </data>
+    <data name="Customer_ContactTitle" xml:space="preserve">
+    <value>Contact Title</value>
+  </data>
+    <data name="Customer_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+    <data name="Customer_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Customer_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Customer_PostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+    <data name="Customer_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+    <data name="Customer_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+    <data name="Customer_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+    <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+    <data name="EmployeePlural" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+    <data name="Employee_EmployeeID" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+    <data name="Employee_LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+    <data name="Employee_FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+    <data name="Employee_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+    <data name="Employee_TitleOfCourtesy" xml:space="preserve">
+    <value>Title Of Courtesy</value>
+  </data>
+    <data name="Employee_BirthDate" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+    <data name="Employee_HireDate" xml:space="preserve">
+    <value>Hire Date</value>
+  </data>
+    <data name="Employee_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+    <data name="Employee_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Employee_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Employee_PostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+    <data name="Employee_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+    <data name="Employee_HomePhone" xml:space="preserve">
+    <value>Home Phone</value>
+  </data>
+    <data name="Employee_Extension" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+    <data name="Employee_Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+    <data name="Employee_Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+    <data name="Employee_PhotoPath" xml:space="preserve">
+    <value>Photo Path</value>
+  </data>
+    <data name="Employee_Employee1" xml:space="preserve">
+    <value>Employee1</value>
+  </data>
+    <data name="Order_Detail" xml:space="preserve">
+    <value>Order Detail</value>
+  </data>
+    <data name="Order_DetailPlural" xml:space="preserve">
+    <value>Order Details</value>
+  </data>
+    <data name="Order_Detail_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Order_Detail_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+    <data name="Order_Detail_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+    <data name="Order_Detail_Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+    <data name="Order_Detail_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+    <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+    <data name="OrderPlural" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+    <data name="Order_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Order_OrderDate" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+    <data name="Order_RequiredDate" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+    <data name="Order_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Order_Freight" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+    <data name="Order_ShipName" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+    <data name="Order_ShipAddress" xml:space="preserve">
+    <value>Ship Address</value>
+  </data>
+    <data name="Order_ShipCity" xml:space="preserve">
+    <value>Ship City</value>
+  </data>
+    <data name="Order_ShipRegion" xml:space="preserve">
+    <value>Ship Region</value>
+  </data>
+    <data name="Order_ShipPostalCode" xml:space="preserve">
+    <value>Ship Postal Code</value>
+  </data>
+    <data name="Order_ShipCountry" xml:space="preserve">
+    <value>Ship Country</value>
+  </data>
+    <data name="Order_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+    <data name="Order_Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+    <data name="Order_Shipper" xml:space="preserve">
+    <value>Shipper</value>
+  </data>
+    <data name="Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+    <data name="ProductPlural" xml:space="preserve">
+    <value>Products</value>
+  </data>
+    <data name="Product_ProductID" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+    <data name="Product_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Product_QuantityPerUnit" xml:space="preserve">
+    <value>Quantity Per Unit</value>
+  </data>
+    <data name="Product_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Product_UnitsInStock" xml:space="preserve">
+    <value>Units In Stock</value>
+  </data>
+    <data name="Product_UnitsOnOrder" xml:space="preserve">
+    <value>Units On Order</value>
+  </data>
+    <data name="Product_ReorderLevel" xml:space="preserve">
+    <value>Reorder Level</value>
+  </data>
+    <data name="Product_Discontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+    <data name="Product_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+    <data name="Product_Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+    <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="RegionPlural" xml:space="preserve">
+    <value>Regions</value>
+  </data>
+    <data name="Region_RegionID" xml:space="preserve">
+    <value>Region ID</value>
+  </data>
+    <data name="Region_RegionDescription" xml:space="preserve">
+    <value>Region Description</value>
+  </data>
+    <data name="Shipper" xml:space="preserve">
+    <value>Shipper</value>
+  </data>
+    <data name="ShipperPlural" xml:space="preserve">
+    <value>Shippers</value>
+  </data>
+    <data name="Shipper_ShipperID" xml:space="preserve">
+    <value>Shipper ID</value>
+  </data>
+    <data name="Shipper_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Shipper_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+    <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+    <data name="SupplierPlural" xml:space="preserve">
+    <value>Suppliers</value>
+  </data>
+    <data name="Supplier_SupplierID" xml:space="preserve">
+    <value>Supplier ID</value>
+  </data>
+    <data name="Supplier_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Supplier_ContactName" xml:space="preserve">
+    <value>Contact Name</value>
+  </data>
+    <data name="Supplier_ContactTitle" xml:space="preserve">
+    <value>Contact Title</value>
+  </data>
+    <data name="Supplier_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+    <data name="Supplier_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Supplier_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Supplier_PostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+    <data name="Supplier_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+    <data name="Supplier_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+    <data name="Supplier_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+    <data name="Supplier_HomePage" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+    <data name="Territory" xml:space="preserve">
+    <value>Territory</value>
+  </data>
+    <data name="TerritoryPlural" xml:space="preserve">
+    <value>Territories</value>
+  </data>
+    <data name="Territory_TerritoryID" xml:space="preserve">
+    <value>Territory ID</value>
+  </data>
+    <data name="Territory_TerritoryDescription" xml:space="preserve">
+    <value>Territory Description</value>
+  </data>
+    <data name="Territory_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Alphabetical_list_of_product" xml:space="preserve">
+    <value>Alphabetical list of product</value>
+  </data>
+    <data name="Alphabetical_list_of_productPlural" xml:space="preserve">
+    <value>Alphabetical list of products</value>
+  </data>
+    <data name="Alphabetical_list_of_product_ProductID" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+    <data name="Alphabetical_list_of_product_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Alphabetical_list_of_product_SupplierID" xml:space="preserve">
+    <value>Supplier ID</value>
+  </data>
+    <data name="Alphabetical_list_of_product_CategoryID" xml:space="preserve">
+    <value>Category ID</value>
+  </data>
+    <data name="Alphabetical_list_of_product_QuantityPerUnit" xml:space="preserve">
+    <value>Quantity Per Unit</value>
+  </data>
+    <data name="Alphabetical_list_of_product_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Alphabetical_list_of_product_UnitsInStock" xml:space="preserve">
+    <value>Units In Stock</value>
+  </data>
+    <data name="Alphabetical_list_of_product_UnitsOnOrder" xml:space="preserve">
+    <value>Units On Order</value>
+  </data>
+    <data name="Alphabetical_list_of_product_ReorderLevel" xml:space="preserve">
+    <value>Reorder Level</value>
+  </data>
+    <data name="Alphabetical_list_of_product_Discontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+    <data name="Alphabetical_list_of_product_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Category_Sales_for_1997" xml:space="preserve">
+    <value>Category Sales for 1997</value>
+  </data>
+    <data name="Category_Sales_for_1997Plural" xml:space="preserve">
+    <value>Category Sales for 1997</value>
+  </data>
+    <data name="Category_Sales_for_1997_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Category_Sales_for_1997_CategorySales" xml:space="preserve">
+    <value>Category Sales</value>
+  </data>
+    <data name="Current_Product_List" xml:space="preserve">
+    <value>Current Product List</value>
+  </data>
+    <data name="Current_Product_ListPlural" xml:space="preserve">
+    <value>Current Product Lists</value>
+  </data>
+    <data name="Current_Product_List_ProductID" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+    <data name="Current_Product_List_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_City" xml:space="preserve">
+    <value>Customer and Suppliers by City</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_CityPlural" xml:space="preserve">
+    <value>Customer and Suppliers by Cities</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_City_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_City_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_City_ContactName" xml:space="preserve">
+    <value>Contact Name</value>
+  </data>
+    <data name="Customer_and_Suppliers_by_City_Relationship" xml:space="preserve">
+    <value>Relationship</value>
+  </data>
+    <data name="Invoice" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+    <data name="InvoicePlural" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+    <data name="Invoice_ShipName" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+    <data name="Invoice_ShipAddress" xml:space="preserve">
+    <value>Ship Address</value>
+  </data>
+    <data name="Invoice_ShipCity" xml:space="preserve">
+    <value>Ship City</value>
+  </data>
+    <data name="Invoice_ShipRegion" xml:space="preserve">
+    <value>Ship Region</value>
+  </data>
+    <data name="Invoice_ShipPostalCode" xml:space="preserve">
+    <value>Ship Postal Code</value>
+  </data>
+    <data name="Invoice_ShipCountry" xml:space="preserve">
+    <value>Ship Country</value>
+  </data>
+    <data name="Invoice_CustomerID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+    <data name="Invoice_CustomerName" xml:space="preserve">
+    <value>Customer Name</value>
+  </data>
+    <data name="Invoice_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+    <data name="Invoice_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Invoice_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Invoice_PostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+    <data name="Invoice_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+    <data name="Invoice_Salesperson" xml:space="preserve">
+    <value>Salesperson</value>
+  </data>
+    <data name="Invoice_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Invoice_OrderDate" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+    <data name="Invoice_RequiredDate" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+    <data name="Invoice_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Invoice_ShipperName" xml:space="preserve">
+    <value>Shipper Name</value>
+  </data>
+    <data name="Invoice_ProductID" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+    <data name="Invoice_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Invoice_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Invoice_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+    <data name="Invoice_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+    <data name="Invoice_ExtendedPrice" xml:space="preserve">
+    <value>Extended Price</value>
+  </data>
+    <data name="Invoice_Freight" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+    <data name="Order_Details_Extended" xml:space="preserve">
+    <value>Order Details Extended</value>
+  </data>
+    <data name="Order_Details_ExtendedPlural" xml:space="preserve">
+    <value>Order Details Extendeds</value>
+  </data>
+    <data name="Order_Details_Extended_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Order_Details_Extended_ProductID" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+    <data name="Order_Details_Extended_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Order_Details_Extended_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Order_Details_Extended_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+    <data name="Order_Details_Extended_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+    <data name="Order_Details_Extended_ExtendedPrice" xml:space="preserve">
+    <value>Extended Price</value>
+  </data>
+    <data name="Order_Subtotal" xml:space="preserve">
+    <value>Order Subtotal</value>
+  </data>
+    <data name="Order_SubtotalPlural" xml:space="preserve">
+    <value>Order Subtotals</value>
+  </data>
+    <data name="Order_Subtotal_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Order_Subtotal_Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+    <data name="Orders_Qry" xml:space="preserve">
+    <value>Orders Qry</value>
+  </data>
+    <data name="Orders_QryPlural" xml:space="preserve">
+    <value>Orders Qries</value>
+  </data>
+    <data name="Orders_Qry_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Orders_Qry_CustomerID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+    <data name="Orders_Qry_EmployeeID" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+    <data name="Orders_Qry_OrderDate" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+    <data name="Orders_Qry_RequiredDate" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+    <data name="Orders_Qry_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Orders_Qry_ShipVia" xml:space="preserve">
+    <value>Ship Via</value>
+  </data>
+    <data name="Orders_Qry_Freight" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+    <data name="Orders_Qry_ShipName" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+    <data name="Orders_Qry_ShipAddress" xml:space="preserve">
+    <value>Ship Address</value>
+  </data>
+    <data name="Orders_Qry_ShipCity" xml:space="preserve">
+    <value>Ship City</value>
+  </data>
+    <data name="Orders_Qry_ShipRegion" xml:space="preserve">
+    <value>Ship Region</value>
+  </data>
+    <data name="Orders_Qry_ShipPostalCode" xml:space="preserve">
+    <value>Ship Postal Code</value>
+  </data>
+    <data name="Orders_Qry_ShipCountry" xml:space="preserve">
+    <value>Ship Country</value>
+  </data>
+    <data name="Orders_Qry_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Orders_Qry_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+    <data name="Orders_Qry_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+    <data name="Orders_Qry_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+    <data name="Orders_Qry_PostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+    <data name="Orders_Qry_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+    <data name="Product_Sales_for_1997" xml:space="preserve">
+    <value>Product Sales for 1997</value>
+  </data>
+    <data name="Product_Sales_for_1997Plural" xml:space="preserve">
+    <value>Product Sales for 1997</value>
+  </data>
+    <data name="Product_Sales_for_1997_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Product_Sales_for_1997_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Product_Sales_for_1997_ProductSales" xml:space="preserve">
+    <value>Product Sales</value>
+  </data>
+    <data name="Products_Above_Average_Price" xml:space="preserve">
+    <value>Products Above Average Price</value>
+  </data>
+    <data name="Products_Above_Average_PricePlural" xml:space="preserve">
+    <value>Products Above Average Prices</value>
+  </data>
+    <data name="Products_Above_Average_Price_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Products_Above_Average_Price_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+    <data name="Products_by_Category" xml:space="preserve">
+    <value>Products by Category</value>
+  </data>
+    <data name="Products_by_CategoryPlural" xml:space="preserve">
+    <value>Products by Categories</value>
+  </data>
+    <data name="Products_by_Category_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Products_by_Category_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Products_by_Category_QuantityPerUnit" xml:space="preserve">
+    <value>Quantity Per Unit</value>
+  </data>
+    <data name="Products_by_Category_UnitsInStock" xml:space="preserve">
+    <value>Units In Stock</value>
+  </data>
+    <data name="Products_by_Category_Discontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+    <data name="Sales_by_Category" xml:space="preserve">
+    <value>Sales by Category</value>
+  </data>
+    <data name="Sales_by_CategoryPlural" xml:space="preserve">
+    <value>Sales by Categories</value>
+  </data>
+    <data name="Sales_by_Category_CategoryID" xml:space="preserve">
+    <value>Category ID</value>
+  </data>
+    <data name="Sales_by_Category_CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+    <data name="Sales_by_Category_ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+    <data name="Sales_by_Category_ProductSales" xml:space="preserve">
+    <value>Product Sales</value>
+  </data>
+    <data name="Sales_Totals_by_Amount" xml:space="preserve">
+    <value>Sales Totals by Amount</value>
+  </data>
+    <data name="Sales_Totals_by_AmountPlural" xml:space="preserve">
+    <value>Sales Totals by Amounts</value>
+  </data>
+    <data name="Sales_Totals_by_Amount_SaleAmount" xml:space="preserve">
+    <value>Sale Amount</value>
+  </data>
+    <data name="Sales_Totals_by_Amount_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Sales_Totals_by_Amount_CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+    <data name="Sales_Totals_by_Amount_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Summary_of_Sales_by_Quarter" xml:space="preserve">
+    <value>Summary of Sales by Quarter</value>
+  </data>
+    <data name="Summary_of_Sales_by_QuarterPlural" xml:space="preserve">
+    <value>Summary of Sales by Quarters</value>
+  </data>
+    <data name="Summary_of_Sales_by_Quarter_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Summary_of_Sales_by_Quarter_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Summary_of_Sales_by_Quarter_Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+    <data name="Summary_of_Sales_by_Year" xml:space="preserve">
+    <value>Summary of Sales by Year</value>
+  </data>
+    <data name="Summary_of_Sales_by_YearPlural" xml:space="preserve">
+    <value>Summary of Sales by Years</value>
+  </data>
+    <data name="Summary_of_Sales_by_Year_ShippedDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+    <data name="Summary_of_Sales_by_Year_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+    <data name="Summary_of_Sales_by_Year_Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+</root>
