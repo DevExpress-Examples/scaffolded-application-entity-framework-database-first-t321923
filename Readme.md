@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DevExpressWalkthrough/MainWindow.xaml)
+* [NorthwindEntitiesViewModel.cs](./CS/DevExpressWalkthrough/ViewModels/NorthwindEntitiesViewModel.cs)
+* [NorthwindEntitiesView.xaml](./CS/DevExpressWalkthrough/Views/NorthwindEntitiesView.xaml)
+<!-- default file list end -->
 # Scaffolded Application (Entity Framework Database First)
 
 
