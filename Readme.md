@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [NorthwindEntities.Context.cs](./CS/Scaffolding.DatabaseFirst/NorthwindEntities.Context.cs)
+* [NorthwindEntitiesViewModel.cs](./CS/Scaffolding.DatabaseFirst/ViewModels/NorthwindEntitiesViewModel.cs)
+* **[NorthwindEntitiesView.xaml](./CS/Scaffolding.DatabaseFirst/Views/NorthwindEntitiesView.xaml)**
+<!-- default file list end -->
 # Scaffolded Application (Entity Framework Database First)
 
 
