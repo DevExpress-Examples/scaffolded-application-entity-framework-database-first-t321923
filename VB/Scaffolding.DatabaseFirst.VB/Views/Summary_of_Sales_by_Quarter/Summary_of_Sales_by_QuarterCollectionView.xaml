@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Views.Summary_of_Sales_by_QuarterCollectionView"
+<UserControl x:Class="Views.Summary_of_Sales_by_QuarterCollectionView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
